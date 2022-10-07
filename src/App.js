@@ -3,6 +3,7 @@ import { BrowserRouter, Outlet, Route, Routes } from 'react-router-dom';
 import './App.css';
 import Beranda from './pages/Beranda';
 import Login from './pages/Login';
+import Register from './pages/Register';
 
 const Protected = () => {
   
@@ -23,6 +24,7 @@ function App() {
           
         </Route>
         <Route path="/login" element={<Login />} />
+        <Route path='/register' element={<Register />} />
       </Routes>
     </BrowserRouter>
     </>

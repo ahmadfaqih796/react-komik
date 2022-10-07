@@ -1,26 +1,25 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  background-color: #000;
-  box-sizing: border-box;
-}
-form {
-  position: relative;
+.login {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   background: rgba(0, 0, 0, 0.5);
   border: 2px solid black;
   width: 300px;
   overflow: hidden;
   border-radius: 20px;
+  animation: slide alternate 2s;
 }
-form::before{
+@keyframes slide {
+  0%{
+    top: -50%;
+    opacity: 0;
+  } 100% {
+    top: 50%;
+    opacity: 1;
+  }
+}
+.login::before{
   content: '';
   position: absolute;
   left: 50%;
@@ -32,7 +31,7 @@ form::before{
   animation: putar 4s linear infinite;
   transform-origin: 0 0;
 }
-form::after{
+.login::after{
   content: '';
   position: absolute;
   background: #0e1538;
@@ -46,7 +45,7 @@ form::after{
     rotate: 360deg;
   }
 }
-form h1 {
+.login h1 {
   position: relative;
   text-align: center;
   font-size: 2rem;
@@ -54,7 +53,7 @@ form h1 {
   color: white;
   z-index: 9999;
 }
-form .group {
+.login .group {
   z-index: 10;
   display: flex;
   position: relative;
@@ -63,7 +62,7 @@ form .group {
   width: 100%;
   margin: 1rem 0;
 }
-button {
+.login button {
   width: 200px;
   text-align: center;
   line-height: 40px;
@@ -78,10 +77,10 @@ button {
   border-radius: 30px;
   z-index: 1;
 }
-button:hover {
+.login button:hover {
   animation: animate 8s linear infinite;
 }
-form .group a{
+.login .group a{
   text-decoration: none;
   color: #fff;
   margin: 0 0 1rem 0;
@@ -94,7 +93,7 @@ form .group a{
     background-position: 400%;
   }
 }
-button::before{
+.login button::before{
   content: '';
   position: absolute;
   top: -5px;
@@ -110,11 +109,11 @@ button::before{
   opacity: 0;
   transition: 0.5s;
 }
-button:hover::before{
+.login button:hover::before{
   filter: blur(20px);
   opacity: 1;
 }
-img {
+.login img {
 	display: block;
 	width: 150px;
 	margin: 10px auto 20px auto;
@@ -122,15 +121,15 @@ img {
 }
 
 /* aaaa */
-.input-group {
+.login .input-group {
 	position: relative;
 	width: 80%;
   margin: 0 auto 1rem auto;
   z-index: 5;
 }
 
-.input-group input,
-.input-group a {
+.login .input-group input,
+.login .input-group a {
 	height: 50px;
 	width: 100%;
 	padding: 10px 20px;
@@ -142,7 +141,7 @@ img {
 	border-radius: 10px;
 }
 
-.input-group span {
+.login .input-group span {
 	position: absolute;
 	top: 11px;
 	font-size: 18px;
@@ -153,8 +152,8 @@ img {
 	transition: 1s;
 }
 
-.input-group input:focus~span,
-.input-group input:valid~span {
+.login .input-group input:focus~span,
+.login .input-group input:valid~span {
 	top: -9px;
 	left: 20px;
 	font-size: 12px;
@@ -165,21 +164,21 @@ img {
 	border-radius: 5px;
 }
 /* check box */
-.input-checkbox {
+.login .input-checkbox {
 	position: relative;
 	width: 100%;
   z-index: 5;
   text-align: center;
 }
 
-.input-checkbox input {
+.login .input-checkbox input {
 	display: inline-block;
 	position: relative;
 	width: 40px;
 	height: 15px;
 }
 
-.input-checkbox input::before {
+.login .input-checkbox input::before {
 	content: "";
 	display: inline-block;
 	position: relative;
@@ -191,7 +190,7 @@ img {
 	-moz-border-radius: 30px;
 }
 
-.input-checkbox input::after {
+.login .input-checkbox input::after {
 	content: "";
 	display: inline-block;
 	position: absolute;
@@ -208,12 +207,12 @@ img {
 	-khtml-transition: 0.3s;
 }
 
-.input-checkbox input:checked::after {
+.login .input-checkbox input:checked::after {
 	left: 27px;
 	background: #00ccff;
 }
 
-.input-checkbox span {
+.login .input-checkbox span {
 	height: 50px;
 	width: 100%;
   color: #fff;

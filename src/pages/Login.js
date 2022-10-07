@@ -40,7 +40,7 @@ const Login = () => {
   }
   return(
     <>
-    <form onSubmit={handleLogin}>
+    <form onSubmit={handleLogin} className="login">
       <div className="group">
         <img src={logo} alt=""/>
       </div>
@@ -75,7 +75,7 @@ const Login = () => {
         <button type="submit">Login</button> 
       </div>
       <div className="group">
-        <a href="a">Silahkan Register jika tidak punya</a>
+        <a href="/register">Silahkan Register jika tidak punya</a>
       </div>
     </form>
     </>
