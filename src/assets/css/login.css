@@ -1,10 +1,29 @@
+.halaman-user {
+	width: 100vw;
+	height: 100vh;
+	background-image: url(https://images7.alphacoders.com/740/740447.jpg);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-attachment: fixed;
+	background-size: cover;
+}
+.halaman-user::before{
+	background-color: #01182ab8;
+  bottom: 0;
+  content: "";
+  display: inline-block;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
 .login {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: rgba(0, 0, 0, 0.5);
-  border: 2px solid black;
+  /* background: rgba(0, 0, 0, 0.5); */
+  /* border: 2px solid black; */
   width: 300px;
   overflow: hidden;
   border-radius: 20px;

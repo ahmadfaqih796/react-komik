@@ -22,7 +22,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Protected />}>
           <Route index element={<Beranda />} />
-          <Route path='/detail/:id' element={<Detail id="ini aku"/>} />
+          <Route path='/detail/:id' element={<Detail id=":id"/>} />
           {/* <Route path="/transaksi" element={<TransaksiPage />} /> */}
           
         </Route>

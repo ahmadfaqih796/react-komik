@@ -1,20 +1,21 @@
-import axios from 'axios';
-import { useEffect, useState } from 'react';
-import { useNavigate } from 'react-router-dom'
-import '../assets/css/root.css'
-import Navigasi from '../features/Navigasi';
+import axios from "axios";
+import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import "../assets/css/root.css";
+import Navigasi from "../features/Navigasi";
+import Detail from "./Detail";
 const Beranda = () => {
   const navigate = useNavigate();
 
   const [komiks, setKomiks] = useState([]);
 
   const handleLogout = (e) => {
-    localStorage.removeItem("token")
-    navigate("/login")
-  }
+    localStorage.removeItem("token");
+    navigate("/login");
+  };
   const getall = async () => {
     await axios
-      .get('http://localhost:3001/komik')
+      .get("http://localhost:3001/komik")
       .then((response) => setKomiks(response.data))
       .catch((err) => console.log(err));
   };
@@ -28,35 +29,133 @@ const Beranda = () => {
       <h1>ini beranda</h1>
       <table border={1}>
         <thead>
-        <tr>
-          <th>helo</th>
-        </tr>
+          <tr>
+            <th>helo</th>
+          </tr>
         </thead>
         <tbody>
-        {komiks.map((val, index) => (
-          <tr key={index}>
-            <td>
-              <a href={`/detail/${val._id}`} >{val.judul}</a>  
-            </td>
-            <td><img src={val.thumb} alt="" /></td>
-            <td>
-              {
-                val.genres.map((person, index) => (
+          {komiks.map((val, index) => (
+            <tr key={index}>
+              <td>
+                <a href={`/detail/${val._id}`}>{val.judul}</a>
+              </td>
+              <td>
+                <img src={val.thumb} alt="" />
+              </td>
+              <td>
+                {val.genres.map((person, index) => (
                   <ul key={index}>
                     <li>{person.genre}</li>
                   </ul>
-                ))
-              }
-            </td>
-            <td>{val.creator}</td>
-            <td>{}</td>
-          </tr>
-        ))}
+                ))}
+              </td>
+              <td>{val.creator}</td>
+              <td>{}</td>
+            </tr>
+          ))}
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis
+            odio corporis similique alias itaque distinctio numquam facere
+            maxime incidunt eius. Hic incidunt quaerat unde, maxime quia ad quae
+            vitae earum!
+          </p>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis
+            odio corporis similique alias itaque distinctio numquam facere
+            maxime incidunt eius. Hic incidunt quaerat unde, maxime quia ad quae
+            vitae earum!
+          </p>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis
+            odio corporis similique alias itaque distinctio numquam facere
+            maxime incidunt eius. Hic incidunt quaerat unde, maxime quia ad quae
+            vitae earum!
+          </p>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis
+            odio corporis similique alias itaque distinctio numquam facere
+            maxime incidunt eius. Hic incidunt quaerat unde, maxime quia ad quae
+            vitae earum!
+          </p>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis
+            odio corporis similique alias itaque distinctio numquam facere
+            maxime incidunt eius. Hic incidunt quaerat unde, maxime quia ad quae
+            vitae earum!
+          </p>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis
+            odio corporis similique alias itaque distinctio numquam facere
+            maxime incidunt eius. Hic incidunt quaerat unde, maxime quia ad quae
+            vitae earum!
+          </p>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis
+            odio corporis similique alias itaque distinctio numquam facere
+            maxime incidunt eius. Hic incidunt quaerat unde, maxime quia ad quae
+            vitae earum!
+          </p>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis
+            odio corporis similique alias itaque distinctio numquam facere
+            maxime incidunt eius. Hic incidunt quaerat unde, maxime quia ad quae
+            vitae earum!
+          </p>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis
+            odio corporis similique alias itaque distinctio numquam facere
+            maxime incidunt eius. Hic incidunt quaerat unde, maxime quia ad quae
+            vitae earum!
+          </p>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis
+            odio corporis similique alias itaque distinctio numquam facere
+            maxime incidunt eius. Hic incidunt quaerat unde, maxime quia ad quae
+            vitae earum!
+          </p>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis
+            odio corporis similique alias itaque distinctio numquam facere
+            maxime incidunt eius. Hic incidunt quaerat unde, maxime quia ad quae
+            vitae earum!
+          </p>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis
+            odio corporis similique alias itaque distinctio numquam facere
+            maxime incidunt eius. Hic incidunt quaerat unde, maxime quia ad quae
+            vitae earum!
+          </p>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis
+            odio corporis similique alias itaque distinctio numquam facere
+            maxime incidunt eius. Hic incidunt quaerat unde, maxime quia ad quae
+            vitae earum!
+          </p>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis
+            odio corporis similique alias itaque distinctio numquam facere
+            maxime incidunt eius. Hic incidunt quaerat unde, maxime quia ad quae
+            vitae earum!
+          </p>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis
+            odio corporis similique alias itaque distinctio numquam facere
+            maxime incidunt eius. Hic incidunt quaerat unde, maxime quia ad quae
+            vitae earum!
+          </p>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis
+            odio corporis similique alias itaque distinctio numquam facere
+            maxime incidunt eius. Hic incidunt quaerat unde, maxime quia ad quae
+            vitae earum!
+          </p>
         </tbody>
       </table>
-      <button onClick={handleLogout} className="tombol">Logout</button>
+      <button onClick={handleLogout} className="tombol">
+        Logout
+      </button>
     </>
-  )
-}
+  );
+};
 
-export default Beranda
+export default Beranda;

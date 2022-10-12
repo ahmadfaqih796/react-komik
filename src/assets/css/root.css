@@ -6,15 +6,27 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #000;
+  /* background-color: #000; */
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
-h1 {
-  color: aqua;
-}
-.tombol {
-  color: aqua;
-}
-table {
+body::selection{
   color: white;
+  background: #0089f2;
+}
+body::-webkit-scrollbar{
+  width: 16px;
+}
+body::-webkit-scrollbar-track{
+  background: #e6e6e6;
+  border-radius: 10px;
+  box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+body::-webkit-scrollbar-thumb{
+  border-radius: 10px;
+  box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+  background: linear-gradient(#3498db,#9b59b6);
+}
+body::-webkit-scrollbar-thumb:hover{
+  background: linear-gradient(#2691d9,#954eb1);
 }
