@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { BrowserRouter, Outlet, Route, Routes } from 'react-router-dom';
 import './App.css';
 import Beranda from './pages/Beranda';
+import Detail from './pages/Detail';
 import Login from './pages/Login';
 import Register from './pages/Register';
 
@@ -14,12 +15,14 @@ const Protected = () => {
 };
 
 function App() {
+
   return (
     <>
       <BrowserRouter>
       <Routes>
         <Route path="/" element={<Protected />}>
           <Route index element={<Beranda />} />
+          <Route path='/detail/:id' element={<Detail id="ini aku"/>} />
           {/* <Route path="/transaksi" element={<TransaksiPage />} /> */}
           
         </Route>
