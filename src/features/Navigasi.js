@@ -1,53 +1,39 @@
 import "../assets/css/client/navigasi.css";
 
-const Navigasi = () => {
-  const navClick = (e) => {
-    const nav = document.querySelector("nav ul");
-    nav.classList.toggle("slide");
-    // console.log('hello')
-  };
+const navClick = (e) => {
+	const nav = document.querySelector('nav ul');
+	nav.classList.toggle('slide');
+	// console.log('hello')
+}
+const Navigasi = ({logout}) => {
   return (
     <>
-      <nav>
-        <div class="menu-icon">
-          <span class="fas fa-bars"></span>
+			<nav>
+        <div className="menu-toggle">
+          <input onClick={navClick} type="checkbox"/>
+          <span></span>
+          <span></span>
+          <span></span>
         </div>
-        <div class="logo">
-          <div class="wrapper"></div>
-          <div class="logo-text" data-text="HIMATK">
-            HIMATK
-          </div>
+        <div className="logo">
+          QihToon
         </div>
-        <div class="nav-items">
-          <li>
-            <a href="<?= base_url() ?>/Beranda">Beranda</a>
-          </li>
-          <li>
-            <a href="<?= base_url() ?>/Seminar">Seminar</a>
-          </li>
-          <li>
-            <a href="<?= base_url() ?>/Berita">Berita</a>
-          </li>
-          <li>
-            <a href="<?= base_url() ?>/Pengurus">Pengurus</a>
-          </li>
-        </div>
-        <div class="search-icon">
-          <span class="fas fa-search"></span>
-        </div>
-        <div class="cancel-icon">
-          <span class="fas fa-times"></span>
-        </div>
-        <form action="Berita" method="POST">
+        <ul>
+          <li><a href="#beranda">Beranda</a></li>
+          <li><a href="#tentang">Tentang</a></li>
+          <li><a href="#projek">Rekomendasi</a></li>
+          <li><a href="/login" className="out" onClick={logout}>Logout</a></li>
+        </ul>
+				<form action="" method="POST">
           <input
             type="search"
-            name="kunci"
-            class="search-data"
-            placeholder="cari berita"
+            name="search"
+            className="search-data"
+            placeholder="cari komik"
             required
             autocomplete="off"
           />
-          <button type="submit" name="submit" class="fas fa-search"></button>
+          <button type="submit" name="submit" className="fas fa-search"></button>
         </form>
       </nav>
     </>

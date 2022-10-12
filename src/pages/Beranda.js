@@ -2,6 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "../assets/css/root.css";
+import Header from "../features/Header";
 import Navigasi from "../features/Navigasi";
 import Detail from "./Detail";
 const Beranda = () => {
@@ -25,9 +26,10 @@ const Beranda = () => {
 
   return (
     <>
-      <Navigasi />
+      <Navigasi logout={handleLogout}/>
+			<Header />
       <h1>ini beranda</h1>
-      <table border={1}>
+      {/* <table border={1}>
         <thead>
           <tr>
             <th>helo</th>
@@ -53,107 +55,8 @@ const Beranda = () => {
               <td>{}</td>
             </tr>
           ))}
-          <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis
-            odio corporis similique alias itaque distinctio numquam facere
-            maxime incidunt eius. Hic incidunt quaerat unde, maxime quia ad quae
-            vitae earum!
-          </p>
-          <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis
-            odio corporis similique alias itaque distinctio numquam facere
-            maxime incidunt eius. Hic incidunt quaerat unde, maxime quia ad quae
-            vitae earum!
-          </p>
-          <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis
-            odio corporis similique alias itaque distinctio numquam facere
-            maxime incidunt eius. Hic incidunt quaerat unde, maxime quia ad quae
-            vitae earum!
-          </p>
-          <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis
-            odio corporis similique alias itaque distinctio numquam facere
-            maxime incidunt eius. Hic incidunt quaerat unde, maxime quia ad quae
-            vitae earum!
-          </p>
-          <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis
-            odio corporis similique alias itaque distinctio numquam facere
-            maxime incidunt eius. Hic incidunt quaerat unde, maxime quia ad quae
-            vitae earum!
-          </p>
-          <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis
-            odio corporis similique alias itaque distinctio numquam facere
-            maxime incidunt eius. Hic incidunt quaerat unde, maxime quia ad quae
-            vitae earum!
-          </p>
-          <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis
-            odio corporis similique alias itaque distinctio numquam facere
-            maxime incidunt eius. Hic incidunt quaerat unde, maxime quia ad quae
-            vitae earum!
-          </p>
-          <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis
-            odio corporis similique alias itaque distinctio numquam facere
-            maxime incidunt eius. Hic incidunt quaerat unde, maxime quia ad quae
-            vitae earum!
-          </p>
-          <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis
-            odio corporis similique alias itaque distinctio numquam facere
-            maxime incidunt eius. Hic incidunt quaerat unde, maxime quia ad quae
-            vitae earum!
-          </p>
-          <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis
-            odio corporis similique alias itaque distinctio numquam facere
-            maxime incidunt eius. Hic incidunt quaerat unde, maxime quia ad quae
-            vitae earum!
-          </p>
-          <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis
-            odio corporis similique alias itaque distinctio numquam facere
-            maxime incidunt eius. Hic incidunt quaerat unde, maxime quia ad quae
-            vitae earum!
-          </p>
-          <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis
-            odio corporis similique alias itaque distinctio numquam facere
-            maxime incidunt eius. Hic incidunt quaerat unde, maxime quia ad quae
-            vitae earum!
-          </p>
-          <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis
-            odio corporis similique alias itaque distinctio numquam facere
-            maxime incidunt eius. Hic incidunt quaerat unde, maxime quia ad quae
-            vitae earum!
-          </p>
-          <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis
-            odio corporis similique alias itaque distinctio numquam facere
-            maxime incidunt eius. Hic incidunt quaerat unde, maxime quia ad quae
-            vitae earum!
-          </p>
-          <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis
-            odio corporis similique alias itaque distinctio numquam facere
-            maxime incidunt eius. Hic incidunt quaerat unde, maxime quia ad quae
-            vitae earum!
-          </p>
-          <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis
-            odio corporis similique alias itaque distinctio numquam facere
-            maxime incidunt eius. Hic incidunt quaerat unde, maxime quia ad quae
-            vitae earum!
-          </p>
         </tbody>
-      </table>
-      <button onClick={handleLogout} className="tombol">
-        Logout
-      </button>
+      </table> */}
     </>
   );
 };

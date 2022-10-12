@@ -1,0 +1,51 @@
+header {
+	width: 100vw;
+	height: 500px;
+	margin: -50px 0 0 0;
+	background-image: url(https://images7.alphacoders.com/740/740447.jpg);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-attachment: fixed;
+	background-size: cover;
+}
+header::before{
+	background: radial-gradient(circle, rgba(9,9,121,0.6) 0%, rgba(0,0,0,1) 100%);
+  bottom: 0;
+	width: 100vw;
+	height: 500px;
+  content: "";
+  display: inline-block;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+header h1 {
+	font-family: guy;
+	position: absolute;
+	top: 100px;
+	width: 100%;
+	letter-spacing: 0.5rem;
+	text-align: center;
+	font-size: 100px;
+	color: white;
+}
+@font-face {
+	font-family: guy;
+	src: url(../../font/LuckiestGuy-Regular.ttf);
+}
+header img {
+	width: 100%;
+	height: 100px;
+	position: absolute;
+	top: 400px;
+}
+@media screen and (max-width: 575px){
+	header::before{
+		margin-top: -50px;
+	}
+	header img {
+		height: 80px;
+		top: 370px;
+	}
+}
