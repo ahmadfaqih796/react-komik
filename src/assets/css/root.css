@@ -9,6 +9,7 @@ body {
   /* background-color: #000; */
   box-sizing: border-box;
   scroll-behavior: smooth;
+	overflow-x: hidden;
 }
 body::selection{
   color: white;

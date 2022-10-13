@@ -2,9 +2,10 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "../assets/css/root.css";
+import "../assets/css/client/beranda.css";
 import Header from "../features/Header";
 import Navigasi from "../features/Navigasi";
-import Detail from "./Detail";
+
 const Beranda = () => {
   const navigate = useNavigate();
 
@@ -26,37 +27,21 @@ const Beranda = () => {
 
   return (
     <>
-      <Navigasi logout={handleLogout}/>
-			<Header />
-      <h1>ini beranda</h1>
-      {/* <table border={1}>
-        <thead>
-          <tr>
-            <th>helo</th>
-          </tr>
-        </thead>
-        <tbody>
-          {komiks.map((val, index) => (
-            <tr key={index}>
-              <td>
-                <a href={`/detail/${val._id}`}>{val.judul}</a>
-              </td>
-              <td>
-                <img src={val.thumb} alt="" />
-              </td>
-              <td>
-                {val.genres.map((person, index) => (
-                  <ul key={index}>
-                    <li>{person.genre}</li>
-                  </ul>
-                ))}
-              </td>
-              <td>{val.creator}</td>
-              <td>{}</td>
-            </tr>
+      <Navigasi logout={handleLogout} />
+      <Header />
+      <main className="beranda">
+        <legend>Rekomendasi</legend>
+        <section>
+          {komiks.map((data, index) => (
+            <article key={index}>
+              <img src={data.thumb} alt="aaaa" />
+              <a href={`/detail/${data.seriesKode}`}>{data.judul}</a>
+            </article>
           ))}
-        </tbody>
-      </table> */}
+        </section>
+				<legend>HOT</legend>
+      </main>
+      <h1>ini beranda</h1>
     </>
   );
 };
