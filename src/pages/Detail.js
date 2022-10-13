@@ -46,7 +46,7 @@ const Detail = () => {
           <li>
 						{JSON.stringify(chapter)}
 						<h1>{val.episode}</h1>
-            <a href={`/chapter/${val.episode}`}>{val.judul}</a>
+            <a href={`/chapter/${val._id}`}>{val.judul}</a>
           </li>
         </ul>
       ))}

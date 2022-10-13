@@ -1,0 +1,41 @@
+.beranda {
+	background:linear-gradient(rgb(0, 0, 0) 40%, rgba(9, 9, 121, 0.918) 100%);
+	width: 100vw;
+	height: 1000px;
+	color: white;
+}
+.beranda legend {
+	padding: 2rem 0;
+	position: relative;
+	font-size: 2.5rem;
+	text-align: center;
+	font-family: guy;
+	letter-spacing: 2px;
+}
+.beranda section {
+	display: flex;
+	width: 500px;
+	margin: 0 auto;
+	flex-direction: row;
+	justify-content: center;
+}
+.beranda section article {
+	display: block;
+	margin: 1rem;
+	width: 180px;
+	flex-direction: column;
+}
+.beranda section article img {
+	width: 150px;
+	height: 225px;
+	display: block;
+	margin: 0 auto;
+	border-radius: 1rem;
+	object-fit: cover;
+}
+.beranda section article a {
+	text-decoration: none;
+	color: white;
+	display: block;
+	text-align: center;
+}
